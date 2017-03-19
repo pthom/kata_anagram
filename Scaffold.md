@@ -7,4 +7,3 @@ This is a scaffold for a TDD devel lab in C++ 11.
 - header only test library
 - the tests can be written "in-place" (in the same cpp file as the tested function)
 - tutorial : https://github.com/onqtam/doctest/blob/master/doc/markdown/tutorial.md
-

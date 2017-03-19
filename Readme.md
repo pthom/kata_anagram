@@ -1,10 +1,64 @@
-# Scaffold / Cmake scaffold for TDD devel lab 
-This is a scaffold for a TDD devel lab in C++ 11.
+# Anagram Kata
+P. Thomet 17 Mars 2017
 
-2 targets are available: lab (main) and lab_test (unit tests)
+# But du kata
 
-### Notes about doctest (https://github.com/onqtam/doctest)
-- header only test library
-- the tests can be written "in-place" (in the same cpp file as the tested function)
-- tutorial : https://github.com/onqtam/doctest/blob/master/doc/markdown/tutorial.md
+cf. https://sherlock.ivsweb.com/pages/viewpage.action?pageId=27689058
 
+Etant donné une liste alphabétique de mots, ressemblant a ceci :
+```
+BELOUGA
+BONJOUR
+BOULAGE
+CINTRAGE
+DEMAIN
+DEMOCRATIE
+GABELOU
+GRACIENT
+PARDON
+RECULER
+ULCERER
+```  
+
+Ecrire un programme qui prend cette liste en input et donne en output les mots en les regroupant par anagramme
+
+Dans notre exemple, on doit donner en output :
+```
+BELOUGA - BOULAGE - GABELOU
+BONJOUR
+DEMAIN
+DEMOCRATIE
+CINTRAGE - GRACIENT
+PARDON
+RECULER - ULCERER
+```
+
+2) Quelle est la complexité de cet algorithme ( O(n), O(n^2), O(n^3) ) ou autre ?
+   Pouvez-vous imaginer une version plus performante ?
+
+3) Faire fonctionner le code sur le fichier [resources/wordlist.txt](resources/wordlist.txt) dont voici un extrait :
+```
+Acrilans
+Acropolis
+Acrux
+Acrux's
+Act
+Actaeon
+Actinomyces
+Actinomyces's
+Actinozoa
+Actinozoa's
+Actium
+Actium's
+```
+
+4) Question subsidiaires
+
+i. Combien de temps mettra l'exécution sur le fichier wordlist.txt. 
+Peut-on faire mieux ?
+
+ii. Afficher les résultats du fichier wordlist.txt en les triant par ordre décroissant de "nombre d'anagrammes"
+
+
+# Note / Fonctionnement
+Vous devrez copier le repertoire "resources" dans votre repertoire d'execution. 
