@@ -15,9 +15,9 @@ include_directories(${Boost_INCLUDE_DIRS})
 include_directories("thirdparty/doctest")
 
 # Add main target and test target
-add_executable(anagram anagram.cpp)
+add_executable(anagram anagram.cpp Readme.md)
 add_executable(anagram_test anagram.cpp)
-target_compile_definitions(anagram_test PRIVATE "-DDOCTEST_CONFIG_IMPLEMENT_WITH_MAIN -DUNIT_TEST")
+target_compile_definitions(anagram_test PRIVATE "-DUNIT_TEST")
 target_compile_definitions(anagram PRIVATE  "-DDOCTEST_CONFIG_DISABLE")
 
 # Enable tests and register test with `make test`

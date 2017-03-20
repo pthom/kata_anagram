@@ -1,7 +1,11 @@
+#ifdef UNIT_TEST 
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#endif
 #include "doctest.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
 
 namespace
 {
