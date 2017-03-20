@@ -1,9 +1,5 @@
 # Anagram Kata
-P. Thomet 17 Mars 2017
 
-# But du kata
-
-cf. https://sherlock.ivsweb.com/pages/viewpage.action?pageId=27689058
 
 Etant donné une liste alphabétique de mots, ressemblant a ceci :
 ```
@@ -59,6 +55,3 @@ Peut-on faire mieux ?
 
 ii. Afficher les résultats du fichier wordlist.txt en les triant par ordre décroissant de "nombre d'anagrammes"
 
-
-# Note / Fonctionnement
-Vous devrez copier le repertoire "resources" dans votre repertoire d'execution. 

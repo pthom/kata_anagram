@@ -1,28 +1,50 @@
 #include "doctest.h"
 #include <iostream>
+#include <fstream>
+#include <vector>
 
-TEST_CASE("UnitTest sample") 
+namespace
 {
-    CHECK( 2 * 2 == 4);
+  const std::string example_file { "resources/wordlist.txt" };
+}
+
+typedef std::vector<std::string> StringArray;
+
+StringArray ReadLines(const std::string & file)
+{
+  std::ifstream is(file.c_str());
+  StringArray lines;
+  std::string currentLine;
+  while (std::getline(is, currentLine))
+    lines.emplace_back(currentLine);
+  return lines;
+}
+
+TEST_CASE("ReadLines can read the whole file") 
+{
+  auto words = ReadLines(example_file);
+  // Note : nombre de lignes du fichier wordlist =  338882
+  CHECK(words.size() == 338882);
+  // 19eme ligne : ABS
+  CHECK(words[18] == std::string("ABS"));
 }
 
 void RunAnagram()
 {
-	// load words from file
+  // On peut travailler avec les donnees complete ou un sous-ensemble
+  //StringArray words = ReadLines(example_file);
+  StringArray words { "ABC", "BCA", "abcd", "DCab", "", "AM", "AMA" };
 
-	// init anagram_result as empty vector<vector<string>>
-
-	// for each word in words 
-		// if it not an anagram of the current anagram_result, add it to anagram_result
-		// otherwise add it to anagram_result where it belongs  
-
-	// Dump result to stdout, grouped by anagrams
+  throw std::runtime_error("Not implemented");
 }
 
-#ifndef UNIT_TEST
+// - pour lancer les tests unitaires : ./anagram_test
+// - pour lancer le programme : ./anagram
+// (Vous devrez copier le repertoire "resources" dans votre repertoire d'execution)
+#ifndef UNIT_TEST 
 int main()
 {
-	RunAnagram();
-	return 0;
+  RunAnagram();
+  return 0;
 }
 #endif
