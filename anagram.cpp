@@ -33,6 +33,25 @@ TEST_CASE("ReadLines can read the whole file")
 
 }
 
+TEST_CASE("MakeAnagrams") 
+{
+  StringArray words { "abc", "bca", "aab", "aaa", "baa"};
+  std::vector<StringArray> expectedAnagrams
+  {
+    {
+      "abc", "bca"
+    },
+    {
+      "aab", "baa"
+    },
+    {
+      "aaa"
+    }
+  };
+  CHECK(MakeAnagrams(words) == expectedAnagrams);
+}
+
+
 void RunAnagram()
 {
   // On peut travailler avec les donnees complete ou un sous-ensemble
