@@ -27,10 +27,10 @@ StringArray ReadLines(const std::string & file)
 TEST_CASE("ReadLines can read the whole file") 
 {
   auto words = ReadLines(example_file);
-  // Note : nombre de lignes du fichier wordlist =  338882
-  CHECK(words.size() == 338882);
-  // 19eme ligne : ABS
-  CHECK(words[18] == std::string("ABS"));
+    // Todo : tester que le nombre de lignes lues correspond au nombre de lignes du fichier
+    // Avec le mode de test: 
+    CHECK(338882 == words.size());
+
 }
 
 void RunAnagram()
