@@ -1,15 +1,7 @@
 cmake_minimum_required (VERSION 3.2.0)
 set (CMAKE_CXX_STANDARD 11)
 
-# Add hunter for easy dependency management
-include("cmake/HunterInit.cmake")
-
 project(anagram)
-
-# Add boost
-hunter_add_package(Boost)
-find_package(Boost CONFIG REQUIRED)
-include_directories(${Boost_INCLUDE_DIRS})
 
 # Add doctest
 include_directories("thirdparty/doctest")
